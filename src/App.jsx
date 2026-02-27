@@ -35,7 +35,7 @@ function App() {
   }, [gameStarted]);
 
   const loadNewPokemon = () => {
-    const randomId = Math.floor(Math.random() * 898) + 1;
+    const randomId = Math.floor(Math.random() * 1025) + 1;
     axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`)
       .then(res => {
         const correctName = res.data.name;
@@ -63,7 +63,7 @@ function App() {
       setAnswered(false);
       setSelectedOption(null);
       loadNewPokemon();
-    }, 1000);
+    }, 500);
   };
 
   const handleGameOver = () => {
@@ -115,7 +115,7 @@ function App() {
           <div className="game-screen">
             <h1>¿Quién es ese Pokémon?</h1>
             <div className="status-bar">
-              <p>Tiempo restante: {timeLeft} segundos</p>
+              <p className="time-left">Tiempo restante: {timeLeft} segundos</p>
               <p>Puntaje: {score}</p>
             </div>
             {timeLeft <= 0 ? (

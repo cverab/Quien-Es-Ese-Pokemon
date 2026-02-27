@@ -144,3 +144,14 @@ td {
 th {
   background-color: #f2f2f2;
 }
+
+.time-left {
+  font-size: 2rem;
+  /* Hace el texto más grande */
+  font-weight: bold;
+  /* Lo pone en negrita */
+  color: #e63946;
+  /* Un rojo intenso para destacar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  /* Sombra para mayor visibilidad */
+}
